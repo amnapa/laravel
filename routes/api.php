@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Test Api with Passport as Auth2 authorization
+Route::post('login', 'API\UserController@login');
+Route::post('register', 'API\UserController@register');

@@ -11,5 +11,10 @@
 |
 */
 
+Route::get('/', function()
+{
+    return 'Hello World';
+});
+
 Route::post('/books', 'BookController@store');
 Route::patch('/books/{book}', 'BookController@update');
